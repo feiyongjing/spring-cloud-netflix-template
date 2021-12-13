@@ -1,3 +1,16 @@
+POST http://localhost:8888/encrypt
+Content-Type: application/text
+
+123456
+
+###
+
+POST http://localhost:8888/decrypt
+Content-Type: application/text
+
+53f3e4940671b09444dc4d2f9bd8bce920f172d3999ed5b05c5537ac0d50b865
+
+###
 GET http://localhost:8082/parent_goods/parent_test?goodsId=xxx
 Accept: application/json
 

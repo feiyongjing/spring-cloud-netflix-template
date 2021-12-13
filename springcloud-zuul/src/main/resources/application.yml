@@ -29,3 +29,5 @@ zuul:
     pre: # 指定禁用过滤器的类型，即LogFilter类中filterType方法指定的类型
       disable: true # true禁用过滤器
 
+
+

@@ -5,10 +5,10 @@ spring:
   application:
     name: spring-cloud-goods
 
-#management:
-#  endpoints:
-#    web:
-#      exposure: *  # 打开所有的Web访问端点
+management:
+  endpoints:
+    web:
+      exposure: *  # 打开所有的Web访问端点
 
 eureka:
   instance:
