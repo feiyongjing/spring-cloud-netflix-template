@@ -1,0 +1,10 @@
+server:
+  port: 3721
+
+spring:
+  application:
+    name: springcloud-dashboard
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: localhost

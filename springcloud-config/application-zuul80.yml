@@ -1,0 +1,31 @@
+server:
+  port: 80 # 服务端口
+
+spring:
+  application:
+    name: springcloud-zuul # 当前服务的名字
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 2 # 每2s发送一次心跳
+    lease-expiration-duration-in-seconds: 10 # 超过10s没有心跳就踢出当前服务
+    prefer-ip-address: true # true代表以服务ip作为连接，而不是机器名
+    instance-id: springcloud-zuul-80 # 当前服务的唯一id
+  client:
+    service-url:
+      defaultZone: http://eureka8762:8762/eureka,http://eureka8763:8763/eureka,http://eureka8764:8764/eureka
+
+zuul:
+  host:
+    connect-timeout-millis: 5000 # zuul连接超时时间
+  routes:  # 配置路由规则，zuul网关分发请求给其他的服务
+    springcloud-goods-protal: # 这个springcloud-goods-protal是注册中心已注册服务的名字
+      servoce-id: springcloud-goods-protal-8082 # 服务的Id
+      path: /portal/** # portal替换服务名，**匹配多级目录
+  ignored-services: '*' # 禁止客户通过哪些服务名访问服务，*表示禁止所有的服务名
+  prefix: /api # 给所有通过zuul网关访问的服务接口添加路径前缀
+  ignored-patterns: /**/feign/** # 路由黑名单，匹配该名单的不允许路由访问，例如当前不匹配路径带有feign的url
+  LogFilter:  # 指定禁用过滤器的类名，即禁用LogFilter这个过滤器
+    pre: # 指定禁用过滤器的类型，即LogFilter类中filterType方法指定的类型
+      disable: true # true禁用过滤器
+

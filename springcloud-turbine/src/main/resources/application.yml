@@ -1,0 +1,15 @@
+server:
+  port: 3722
+
+eureka:
+  client:
+    register-with-eureka: false #表示当前服务不会注册到注册中心
+    service-url:
+      defaultZone: http://eureka8762:8762/eureka,http://eureka8763:8763/eureka,http://eureka8764:8764/eureka
+
+turbine:
+  app-config: springcloud-goods-protal,springcloud-goods-protal-1 # 对多个使用hystrix的项目聚合汇总
+  cluster-name-expression: "default"
+
+
+

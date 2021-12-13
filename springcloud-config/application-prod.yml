@@ -1,8 +1,0 @@
-server:
-  port: 9200 # 服务端口
-
-spring:
-  application:
-    name: springcloud-config-prod # 当前服务的名字
-
-

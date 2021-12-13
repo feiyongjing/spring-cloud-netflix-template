@@ -1,0 +1,17 @@
+server:
+  port: 8888 # 服务端口
+
+spring:
+  application:
+    name: springcloud-config-server # 当前服务的名字
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/feiyongjing/spring-cloud-project-template.git # config配置所在的git仓库地址
+          search-paths: springcloud-config # 远程仓库下config配置文件所在的的目录
+#          force-pull: true       # 强行pull拉取
+#          username: feiyongjing  # 填写登录用户名，公开的库不用写
+#          password: "填写密码"    # 填写登录密码，公开的库不用写
+
+

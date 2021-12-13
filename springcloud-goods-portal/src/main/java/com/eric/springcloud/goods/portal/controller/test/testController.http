@@ -1,0 +1,18 @@
+GET http://localhost:8082/parent_goods/parent_test?goodsId=xxx
+Accept: application/json
+
+###
+
+GET http://localhost:80/springcloud-goods-protal/parent_goods/parent_test?goodsId=xxx
+Accept: application/json
+
+###
+GET http://localhost:80/portal/parent_goods/parent_test?goodsId=xxx
+Accept: application/json
+
+###
+
+GET http://localhost:80/api/portal/parent_goods/parent_test?goodsId=xxx
+Accept: application/json
+
+###
