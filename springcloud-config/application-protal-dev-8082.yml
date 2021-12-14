@@ -39,7 +39,7 @@ management:
         include: '*'  # 如果直接给*，就会打开所有的Web访问端点
 
 aaa:
-  test: 123
+  test: 456
 
 abc: '{cipher}88b8568c4bf5031944a259178ee0d7b7dae9f3a44e97432cb5fcf5567e8a3315'
 kkk: '{cipher}4df3ec41bb8e4feab555e5acaa646b9f6e01fca8a1245a3c6d7bdd6473158084'

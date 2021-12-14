@@ -1,3 +1,7 @@
+GET http://localhost:80/api/portal/parent_goods/getTestConfig
+Accept: application/json
+
+###
 POST http://localhost:8888/encrypt
 Content-Type: application/text
 
