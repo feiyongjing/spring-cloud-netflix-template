@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: springcloud-goods-protal
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
 
 eureka:
   instance:

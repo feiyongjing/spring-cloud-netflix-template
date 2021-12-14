@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: springcloud-config-server # 当前服务的名字
+  rabbitmq:
+    host: xxx
+    port: 5672
+    username: xxx
+    password: xxx
   cloud:
     config:
       server:
@@ -14,4 +19,9 @@ spring:
 #          username: feiyongjing  # 填写登录用户名，公开的库不用写
 #          password: "填写密码"    # 填写登录密码，公开的库不用写
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'  # 如果直接给*，就会打开所有的Web访问端点
 
