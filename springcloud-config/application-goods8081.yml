@@ -8,7 +8,8 @@ spring:
 management:
   endpoints:
     web:
-      exposure: *  # 打开所有的Web访问端点
+      exposure:
+        include: * # 如果直接给*，就会打开所有的Web访问端点
 
 eureka:
   instance:

@@ -20,13 +20,13 @@ public class TestController {
     }
 
 
-    @Value(value = "${aaa.test}")
-    Integer aaaTest;
+//    @Value(value = "${aaa.test}")
+//    Integer aaaTest;
 
-    @GetMapping("/getTestConfig")
-    public String getTest1() {
-        return "获取的配置信息："+aaaTest;
-    }
+//    @GetMapping("/getTestConfig")
+//    public String getTest1() {
+//        return "获取的配置信息："+aaaTest;
+//    }
 
     @GetMapping("/parent_test")
     public String getTest1(@RequestParam("goodsId") String goodsId) {

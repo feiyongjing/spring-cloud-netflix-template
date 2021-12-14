@@ -32,16 +32,11 @@ feign:
   hystrix:
     enabled: true
 
-#management:
-#  endpoints:
-#    web:
-#      exposure: # 如果直接给*，就会打开所有的Web访问端点
-#        include: hystrix.stream
-
 management:
   endpoints:
     web:
-      exposure: *
+      exposure:
+        include: *  # 如果直接给*，就会打开所有的Web访问端点
 
 aaa:
   test: 123
