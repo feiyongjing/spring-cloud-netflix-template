@@ -5,15 +5,15 @@ spring:
   application:
     name: springcloud-config-server # 当前服务的名字
   rabbitmq:
-    host: xxx
+    host: localhost
     port: 5672
-    username: xxx
-    password: xxx
+    username: admin
+    password: admin
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/feiyongjing/spring-cloud-project-template.git # config配置所在的git仓库地址
+          uri: https://gitee.com/feiyongjing/spring-cloud-project-template # config配置所在的gitee仓库地址
           search-paths: springcloud-config # 远程仓库下config配置文件所在的的目录
 #          force-pull: true       # 强行pull拉取
 #          username: feiyongjing  # 填写登录用户名，公开的库不用写
