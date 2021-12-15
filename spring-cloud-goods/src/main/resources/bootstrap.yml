@@ -3,6 +3,15 @@ spring:
     name: application
   cloud:
     config:
-      uri: http://localhost:8888/
       profile: goods8081
       label: main
+      discovery:
+        enabled: true # 让配置中心的url可以被注册中心发现
+        service-id: springcloud-config-server # 配置中心在注册中心注册的服务名称
+        username: admin
+        password: 123456
+
+eureka:
+  client:
+    service-url:
+      defaultZone: 'http://admin:123456@eureka8762:8762/eureka,http://admin:123456@eureka8763:8763/eureka,http://admin:123456@eureka8764:8764/eureka'

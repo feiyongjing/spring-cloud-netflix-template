@@ -24,4 +24,4 @@ eureka:
     instance-id: spring-cloud-goods-8081 # 告诉注册中心服务实例的id，id是唯一的
   client:
     service-url:
-      defaultZone: http://eureka8762:8762/eureka,http://eureka8763:8763/eureka,http://eureka8764:8764/eureka # 注册中心的连接地址
+      defaultZone: 'http://admin:123456@eureka8762:8762/eureka,http://admin:123456@eureka8763:8763/eureka,http://admin:123456@eureka8764:8764/eureka' # 注册中心的连接地址

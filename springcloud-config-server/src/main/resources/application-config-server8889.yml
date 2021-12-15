@@ -1,5 +1,5 @@
 server:
-  port: 8888 # 服务端口
+  port: 8889 # 服务端口
 
 spring:
   application:
@@ -34,10 +34,10 @@ eureka:
     lease-renewal-interval-in-seconds: 2 # �ͻ���ÿ2s����һ������
     lease-expiration-duration-in-seconds: 10 # 10s û�з�������˵���ͻ��˹��ϣ�����ᱻ�߳�ȥ
     prefer-ip-address: true # true˵���ͻ��˷���ķ���ʵ����IP��Ϊ���ӣ�����������
-    instance-id: springcloud-config-server-dev # ����ע�����ķ���ʵ��������
+    instance-id: springcloud-config-server-8889 # ����ע�����ķ���ʵ��������
   client:
     service-url:
-      defaultZone: 'http://admin:123456@eureka8762:8762/eureka,http://admin:123456@eureka8763:8763/eureka,http://admin:123456@eureka8764:8764/eureka'
+      defaultZone: 'http://admin:123456@eureka8762:8762/eureka,http://admin:123456@eureka8763:8763/eureka,http://admin:123456@eureka8764:8764/eureka' # ע�����ĵ����ӵ�ַ
     eureka-server-connect-timeout-seconds: 30
     eureka-server-read-timeout-seconds: 60
 

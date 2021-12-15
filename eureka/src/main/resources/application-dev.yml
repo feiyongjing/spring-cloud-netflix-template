@@ -8,4 +8,12 @@ eureka:
     register-with-eureka: false # false让注册中心不要注册自己
     fetch-registry: false # 表示不去服务端检索其他服务信息，注册中心的职责是维护服务实例
     service-url:
-      defaultZone: http://localhost:8761/eureka # 指定注册中心的地址
+      defaultZone: http://admin:123456@localhost:8761/eureka # 指定注册中心的地址
+      server:
+        #enable-self-preservation: false 禁止使用自我保护机制，默认是开启的
+
+spring:
+  security:
+    user:
+      name: admin             # 注册中心设置用户名
+      password: 123456        # 注册中心设置密码

@@ -13,7 +13,7 @@ eureka:
     instance-id: springcloud-goods-protal-01 # ����ע�����ķ���ʵ��������
   client:
     service-url:
-      defaultZone: http://eureka8762:8762/eureka,http://eureka8763:8763/eureka,http://eureka8764:8764/eureka # ע�����ĵ����ӵ�ַ
+      defaultZone: 'http://admin:123456@eureka8762:8762/eureka,http://admin:123456@eureka8763:8763/eureka,http://admin:123456@eureka8764:8764/eureka' # ע�����ĵ����ӵ�ַ
 
 ribbon:
   ReadTimeout: 6000 # Ribbon处理请求的超时时间
