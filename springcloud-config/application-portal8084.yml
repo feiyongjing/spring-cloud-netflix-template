@@ -4,6 +4,18 @@ server:
 spring:
   application:
     name: springcloud-goods-protal-1
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+  zipkin:
+    base-url: http://localhost:9411 # 指定Zipkin server 的地址
+    sender:
+      type: web  # 发送跟踪数据到Zipkin的类型web(http)
+  sleuth:
+    sampler:
+      probability: 1.0 # 对于微服务接收的请求采样的数量，默认是0.1，也就是10%，因为分布式系统中采集庞大的数据量会影响性能，这里根据数据量来设置
 
 eureka:
   instance:
