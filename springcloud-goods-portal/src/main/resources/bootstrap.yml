@@ -8,8 +8,8 @@ spring:
       discovery:
         enabled: true # 让配置中心的url可以被注册中心发现
         service-id: springcloud-config-server # 配置中心在注册中心注册的服务名称
-      username: admin
-      password: 123456
+      username: admin   # 访问配置中心的用户名
+      password: 123456  # 访问配置中心的密码
 
 eureka:
   client:
