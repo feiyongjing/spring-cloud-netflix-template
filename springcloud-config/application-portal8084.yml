@@ -19,7 +19,7 @@ spring:
   cloud:
     stream:
       binders:
-        rabbitmq:         # 这个rabbitmq是binders中String类型key,是自定义的，会在
+        rabbitmq:         # 这个rabbitmq是binders中String类型key,是自定义的，会在与bindings绑定时使用
           type: rabbit
           environment:
             spring:       # 这个spring是environment中String类型key,是自定义的
@@ -30,9 +30,14 @@ spring:
                 password: admin
                 virtual-host: / # 虚拟主机，在rabbitmq中不同的虚拟主机exchange、queue、message不能互通，相当于数据库的分库
       bindings:
-        input:           # 这个input是管道名,对应在@EnableBinding({Sink.class})中Sink.class的INPUT属性
+        myinput:           # 这个input是管道名,对应在@EnableBinding({Sink.class})中Sink.class的INPUT属性，或者自己写的Sink.class接口INPUT属性值
           destination: spring.cloud.stream.exchange # 定义交换机的名称
-          binder: rabbitmq  # 这个rabbit是spring.cloud.stream.binders.rabbitmq.type所设置的值
+          binder: rabbitmq  # 这个rabbitmq是spring.cloud.stream.binders所自定义设置的key
+      rabbit:
+        bindings:
+          myinput:
+            comsumer:
+              bindingRoutingKey: 'spring.cloud.stream.#' # 设置消费者绑定的路由key
 
 eureka:
   instance:

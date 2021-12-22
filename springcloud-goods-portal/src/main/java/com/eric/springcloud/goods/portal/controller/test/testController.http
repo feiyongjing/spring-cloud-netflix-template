@@ -33,3 +33,7 @@ GET http://localhost:80/api/portal/parent_goods/parent_test?goodsId=xxx
 Accept: application/json
 
 ###
+GET http://localhost:8081/goods/senderMessage?message=xxx
+Accept: application/json
+
+###
