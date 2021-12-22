@@ -37,3 +37,7 @@ GET http://localhost:8081/goods/senderMessage?message=xxx
 Accept: application/json
 
 ###
+POST http://localhost:8888/actuator/bus-refresh
+Content-Type: application/json
+
+###

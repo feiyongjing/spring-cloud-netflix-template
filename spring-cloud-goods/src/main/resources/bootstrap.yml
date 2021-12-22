@@ -10,6 +10,10 @@ spring:
         service-id: springcloud-config-server # 配置中心在注册中心注册的服务名称
       username: admin   # 访问配置中心的用户名
       password: 123456  # 访问配置中心的密码
+#  security:
+#    user:
+#      name: cat           # 设置访问该微服务需要的用户名
+#      password: 123456    # 设置访问该微服务需要的密码
 #    stream:
 #      binders:
 #        rabbitmq:         # 这个rabbitmq是binders中String类型key,是自定义的，会在与bindings绑定时使用
