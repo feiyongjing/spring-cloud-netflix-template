@@ -1,5 +1,6 @@
 package com.eric.springcloud.goods.portal.service;
 
+import com.eric.springcloud.goods.portal.config.FeignConfiguration;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 //        fallback = GoodsRemoteClientFallBack.class
 @FeignClient(value = "SPRING-CLOUD-GOODS",
         fallbackFactory = GoodsRemoteClientFallBackFactory.class
+//        ,configuration = {FeignConfiguration.class}
 )
 public interface GoodsRemoteClient {
     /**

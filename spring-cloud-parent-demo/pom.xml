@@ -22,6 +22,7 @@
         <module>../springcloud-turbine</module>
         <module>../springcloud-zuul</module>
         <module>../springcloud-config-server</module>
+        <module>../springcloud-auth</module>
     </modules>
 
     <properties>

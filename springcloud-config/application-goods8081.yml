@@ -33,10 +33,10 @@ spring:
         myoutput:           # 这个output是管道名,对应在@EnableBinding({Source.class})中Source.class的OUTPUT属性，或者自己写的Source.class接口OUTPUT属性值
           destination: spring.cloud.stream.exchange # 定义交换机的名称
           binder: rabbitmq  # 这个rabbitmq是spring.cloud.stream.binders所自定义设置的key
-  security:
-    user:
-      name: cat           # 设置访问该微服务需要的用户名
-      password: 123456    # 设置访问该微服务需要的密码
+#  security:
+#    user:
+#      name: cat           # 设置访问该微服务需要的用户名
+#      password: 123456    # 设置访问该微服务需要的密码
 
 
 management:
