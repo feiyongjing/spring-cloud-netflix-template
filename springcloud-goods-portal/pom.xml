@@ -69,11 +69,6 @@
             <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
             <version>3.0.13.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>com.eric.springcloud</groupId>
-            <artifactId>auth</artifactId>
-            <version>1.0.0</version>
-        </dependency>
     </dependencies>
 
     <build>
