@@ -63,10 +63,10 @@ public class TestController {
         Map<String,String> params=new HashMap<>();
         params.put("goodsId",goodsId);
         // 第一参数是微服务的url，第二参数是响应类型，第三参数是请求的实际参数
-        ResponseEntity<String> entity = restTemplate.getForEntity(GOODS_SERVICE_URL_2, String.class,params);
+//        ResponseEntity<String> entity = restTemplate.getForEntity(GOODS_SERVICE_URL_2, String.class,params);
 
 //        第一参数是微服务的url，第二参数是请求的方式，第三参数是请求实体内部包含请求头，第四参数是响应类型，第五参数是请求的实际参数
-//        ResponseEntity<String> entity = restTemplate.exchange(GOODS_SERVICE_URL_2, HttpMethod.GET, new HttpEntity<>(httpHeaders), String.class,params);
+        ResponseEntity<String> entity = restTemplate.exchange(GOODS_SERVICE_URL_2, HttpMethod.GET, new HttpEntity<>(httpHeaders), String.class,params);
         System.out.println(entity.getStatusCode());
         System.out.println(entity.getStatusCodeValue());
         System.out.println(entity.getHeaders());

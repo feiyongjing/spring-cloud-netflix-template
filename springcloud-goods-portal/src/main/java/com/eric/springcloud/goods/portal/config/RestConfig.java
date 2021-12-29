@@ -23,18 +23,18 @@ public class RestConfig {
     /**
      * 进行HTTP头信息配置
      */
-//    @Bean
-//    public HttpHeaders getHttpHeaders(){
-//        // 定义HTTP头部信息
-//        HttpHeaders httpHeaders=new HttpHeaders();
-//        // 认证的原始信息
-//        String auth="cat:123456";
-//        // 进行加密处理
-//        byte[] encodeAuth = Base64.getEncoder().encode(auth.getBytes(StandardCharsets.US_ASCII));
-//        String authHeader="Basic "+new String(encodeAuth);
-//        httpHeaders.set("Authorization",authHeader);
-//        return httpHeaders;
-//    }
+    @Bean
+    public HttpHeaders getHttpHeaders(){
+        // 定义HTTP头部信息
+        HttpHeaders httpHeaders=new HttpHeaders();
+        // 认证的原始信息
+        String auth="cat:123456";
+        // 进行加密处理
+        byte[] encodeAuth = Base64.getEncoder().encode(auth.getBytes(StandardCharsets.US_ASCII));
+        String authHeader="Basic "+new String(encodeAuth);
+        httpHeaders.set("Authorization",authHeader);
+        return httpHeaders;
+    }
 
     @Bean
     public RandomRule iRule(){

@@ -1,43 +1,4 @@
-spring:
-  application:
-    name: application
-  cloud:
-    config:
-      profile: goods8081
-      label: main
-      discovery:
-        enabled: true # 让配置中心的url可以被注册中心发现
-        service-id: springcloud-config-server # 配置中心在注册中心注册的服务名称
-      username: admin   # 访问配置中心的用户名
-      password: 123456  # 访问配置中心的密码
-#  security:
-#    user:
-#      name: cat           # 设置访问该微服务需要的用户名
-#      password: 123456    # 设置访问该微服务需要的密码
-#    stream:
-#      binders:
-#        rabbitmq:         # 这个rabbitmq是binders中String类型key,是自定义的，会在与bindings绑定时使用
-#          type: rabbit
-#          environment:
-#            spring:       # 这个spring是environment中String类型key,是自定义的
-#              rabbitmq:
-#                host: localhost
-#                prot: 5672
-#                username: admin
-#                password: admin
-#                virtual-host: / # 虚拟主机，在rabbitmq中不同的虚拟主机exchange、queue、message不能互通，相当于数据库的分库
-#      bindings:
-#        myinput:           # 这个input是管道名,对应在@EnableBinding({Sink.class})中Sink.class的INPUT属性，或者自己写的Sink.class接口INPUT属性值
-#          destination: spring.cloud.stream.exchange # 定义交换机的名称
-#          binder: rabbitmq  # 这个rabbitmq是spring.cloud.stream.binders所自定义设置的key
-#          group: rabbitmq-group # 设置消息的持久化和消息只会被一个消费者消费
-#      rabbit:
-#        bindings:
-#          myinput:
-#            comsumer:
-#              bindingRoutingKey: 'spring.cloud.stream.#' # 设置消费者绑定的路由key
-
-eureka:
-  client:
-    service-url:
-      defaultZone: 'http://admin:123456@eureka8762:8762/eureka,http://admin:123456@eureka8763:8763/eureka,http://admin:123456@eureka8764:8764/eureka'
+app:
+  id: spring-cloud-goods
+apollo:
+  meta: http://192.168.0.100:8080/

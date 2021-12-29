@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 //        fallback = GoodsRemoteClientFallBack.class
 @FeignClient(value = "SPRING-CLOUD-GOODS",
         fallbackFactory = GoodsRemoteClientFallBackFactory.class
-//        ,configuration = {FeignConfiguration.class}
+        ,configuration = {FeignConfiguration.class}
 )
 public interface GoodsRemoteClient {
     /**
