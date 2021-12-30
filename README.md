@@ -1,2 +1,2 @@
-# spring-cloud-project-template
-springCloud项目模板
+# spring-cloud-netflix-template
+springCloud Netflix项目模板
